@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Employeecrud.Models.employeedata>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create",null, new {@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employeemail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeePhoneno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeQualification)
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employeemail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeePhoneno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeQualification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Eid }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "Details", new { id=item.Eid }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.Eid }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

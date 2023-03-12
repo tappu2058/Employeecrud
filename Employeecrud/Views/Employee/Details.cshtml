@@ -1,0 +1,59 @@
+﻿@model Employeecrud.Models.employeedata
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>employeedata</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employeemail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employeemail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeePhoneno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeePhoneno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeQualification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeQualification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Eid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
